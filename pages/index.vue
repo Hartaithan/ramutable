@@ -1,5 +1,13 @@
+<script setup lang="ts">
+import type { CharactersResponse } from '~/models/CharacterModel';
+
+const { data: characters } = await useAPI<CharactersResponse>('/character');
+</script>
+
 <template>
-  <main class="h-full w-full flex justify-center items-center">
-    <p class="text-xl">Hello World!</p>
-  </main>
+  <ul v-if="characters">
+    <li v-for="character in characters.results" :key="character.id">
+      {{ character.name }}
+    </li>
+  </ul>
 </template>
