@@ -1,14 +1,10 @@
+const process = require('node:process');
+
+process.env.ESLINT_TSCONFIG = 'tsconfig.json';
+
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true,
+  extends: '@antfu',
+  rules: {
+    '@typescript-eslint/semi': 'off',
   },
-  parser: "vue-eslint-parser",
-  parserOptions: {
-    parser: "@typescript-eslint/parser",
-  },
-  extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
-  plugins: [],
-  rules: {},
 };
