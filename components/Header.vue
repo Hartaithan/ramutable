@@ -4,10 +4,10 @@
       <NuxtLink to="/" active-class="text-green-600 font-bold">
         Characters
       </NuxtLink>
-      <NuxtLink to="/locations">
+      <NuxtLink to="/locations" active-class="text-green-600 font-bold">
         Locations
       </NuxtLink>
-      <NuxtLink to="/episodes">
+      <NuxtLink to="/episodes" active-class="text-green-600 font-bold">
         Episodes
       </NuxtLink>
     </nav>
