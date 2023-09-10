@@ -9,13 +9,13 @@ const { character } = defineProps<Props>();
 </script>
 
 <template>
-  <div class="flex flex-col p-4 bg-neutral-800 rounded-md">
+  <NuxtLink class="flex flex-col p-4 bg-neutral-800 rounded-md" :to="`/locations/${getId(character.location.url)}`">
     <h2 class="font-bold text-xl mb-2">
       Location
     </h2>
     <p>Location: <b>{{ character.location.name }}</b></p>
     <p>Origin: <b>{{ character.origin.name }}</b></p>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped></style>

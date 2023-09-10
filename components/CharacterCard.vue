@@ -10,7 +10,7 @@ const { character } = defineProps<Props>();
 
 <template>
   <NuxtLink class="flex p-4 bg-neutral-800 rounded-md" :to="`/characters/${character.id}`">
-    <img class="h-20 rounded" :src="character.image">
+    <img class="h-20 min-w-[5rem] rounded" :src="character.image">
     <div class="flex flex-col justify-center ml-4">
       <b>{{ character.name }}</b>
       <p>Gender: <b>{{ character.gender }}</b></p>

@@ -10,7 +10,7 @@ const { character } = defineProps<Props>();
 
 <template>
   <div class="flex p-4 bg-neutral-800 rounded-md">
-    <img class="h-32 rounded" :src="character.image">
+    <img class="h-32 min-w-[8rem] rounded" :src="character.image">
     <div class="flex flex-col justify-center ml-4">
       <b>{{ character.name }}</b>
       <p>Created: <b>{{ new Date(character.created).toLocaleDateString() }}</b></p>
