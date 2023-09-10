@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { CharactersResponse } from '~/models/CharacterModel';
+import { Character } from '~/models/CharacterModel';
+import type { ListResponse } from '~/models/ResponseModel';
 
-const { data: characters } = await useAPI<CharactersResponse>('/character');
+const { data: characters } = await useAPI<ListResponse<Character>>('/character');
 </script>
 
 <template>

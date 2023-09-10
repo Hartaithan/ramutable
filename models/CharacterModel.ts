@@ -1,5 +1,4 @@
-import type { Info } from './InfoModel'
-import type { Location } from './LocationModel';
+import type { CharacterLocation } from './LocationModel';
 import type { Origin } from './OriginModel'
 
 export interface Character {
@@ -10,14 +9,9 @@ export interface Character {
   type: string
   gender: string
   origin: Origin
-  location: Location
+  location: CharacterLocation
   image: string
   episode: string[]
   url: string
   created: string
-}
-
-export interface CharactersResponse {
-  info: Info
-  results: Character[]
 }
