@@ -1,4 +1,5 @@
 import type { Info } from './InfoModel'
+import type { Location } from './LocationModel';
 import type { Origin } from './OriginModel'
 
 export interface Character {

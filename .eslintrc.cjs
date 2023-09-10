@@ -7,5 +7,8 @@ module.exports = {
   rules: {
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/member-delimiter-style': 'off',
+    'vue/first-attribute-linebreak': 'off',
+    'vue/html-indent': 'off',
+    'vue/html-closing-bracket-newline': 'off',
   },
 };
