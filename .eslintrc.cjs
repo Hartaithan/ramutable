@@ -6,5 +6,6 @@ module.exports = {
   extends: '@antfu',
   rules: {
     '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
   },
 };

@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <header>
     <nav class="h-12 bg-neutral-800 flex justify-center items-center gap-6">
@@ -17,5 +13,3 @@
     </nav>
   </header>
 </template>
-
-<style scoped></style>
