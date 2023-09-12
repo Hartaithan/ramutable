@@ -10,4 +10,5 @@ const { data: characters } = await useAPI<ListResponse<Character>>(`/character?p
   <div v-if="characters" class="grid gap-4 grid-cols-4">
     <CharacterCard v-for="character in characters.results" :key="character.id" :character="character" />
   </div>
+  <Pagination route="/" :page="Number(page)" :info="characters?.info" />
 </template>

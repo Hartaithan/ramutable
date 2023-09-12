@@ -10,4 +10,5 @@ const { data: locations } = await useAPI<ListResponse<Location>>(`/location?page
   <div v-if="locations" class="grid gap-4 grid-cols-4">
     <LocationCard v-for="location in locations.results" :key="location.id" :location="location" />
   </div>
+  <Pagination route="/locations" :page="Number(page)" :info="locations?.info" />
 </template>

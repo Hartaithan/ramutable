@@ -10,4 +10,5 @@ const { data: episodes } = await useAPI<ListResponse<Episode>>(`/episode?page=${
   <div v-if="episodes" class="grid gap-4 grid-cols-4">
     <EpisodeCard v-for="episode in episodes.results" :key="episode.id" :episode="episode" />
   </div>
+  <Pagination route="/episodes" :page="Number(page)" :info="episodes?.info" />
 </template>
