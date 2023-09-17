@@ -28,7 +28,7 @@ const { info } = defineProps<Props>();
       <a v-if="page > 1" :href="`${route}?page=${page - 1}`" class="item centered">
         {{ page - 1 }}
       </a>
-      <p class="item centered">
+      <p class="item active centered">
         {{ page }}
       </p>
       <a v-if="page < info.pages" :href="`${route}?page=${page + 1}`" class="item centered">
@@ -57,5 +57,9 @@ const { info } = defineProps<Props>();
 
 .centered {
   @apply flex justify-center items-center
+}
+
+.active {
+  @apply bg-neutral-700 font-bold
 }
 </style>
