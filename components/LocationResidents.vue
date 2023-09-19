@@ -13,7 +13,7 @@ const { residents } = defineProps<Props>();
     <h2 class="font-bold text-xl mb-4">
       Residents ({{ residents.length }})
     </h2>
-    <div class="grid gap-4 grid-cols-8">
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-4 xl:grid-cols-8">
       <NuxtLink v-for="episode in residents" :key="episode" class="flex flex-col p-4 bg-neutral-900 rounded-md"
         :to="`/characters/${getId(episode)}`">
         <p>Resident <b>{{ getId(episode) }}</b></p>

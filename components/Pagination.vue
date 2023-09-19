@@ -11,11 +11,11 @@ const { info } = defineProps<Props>();
 </script>
 
 <template>
-  <div v-if="info" class="flex justify-between mt-6">
-    <p class="centered">
+  <div v-if="info" class="flex flex-wrap md:flex-nowrap justify-between mt-6">
+    <p class="centered order-1 mb-2 md:order-none md:mb-0">
       Page: {{ page }}
     </p>
-    <div class="flex gap-3">
+    <div class="flex justify-center gap-3 order-3 md:order-none w-full md:w-auto">
       <a v-if="page !== 1" :href="`${route}?page=1`" class="item centered">
         «
       </a>
@@ -44,7 +44,7 @@ const { info } = defineProps<Props>();
         »
       </a>
     </div>
-    <p class="centered">
+    <p class="centered order-2 mb-2 md:order-none md:mb-0">
       Total items: {{ info?.count }}
     </p>
   </div>
